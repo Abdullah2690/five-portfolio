@@ -13,7 +13,15 @@
           consequat sunt nostrud amet.
         </p>
         <button class="px-6 py-3 text-white transition rounded bg-primary hover:bg-primary-dark">
-          Download Resume
+          <a 
+            href="https://afkwkgamqajfgxxfureb.supabase.co/storage/v1/object/public/content-bucket//Abdullah%20Silika%20CV.pdf" 
+            download 
+            class="btn"
+            target="_blank" 
+            rel="noopener"
+          >
+  Download CV
+</a>
         </button>
       </div>
       

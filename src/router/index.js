@@ -16,13 +16,13 @@ const routes = [
     component: WorksView
   },
   {
-    path: '/works/:slug',
+    path: '/views/:id',
     name: 'work-detail',
     component: WorkDetailView,
     props: true
   },
   {
-    path: '/contact',
+    path: '/contact',  // Define the new route for the contact page
     name: 'contact',
     component: ContactView  // Add the new route
   }

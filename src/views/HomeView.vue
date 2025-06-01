@@ -1,11 +1,11 @@
 <template>
   <!-- Main container with max-width for large screens -->
-  <main class="container mx-auto px-4 py-8">
+  <main class="container px-4 py-8 mx-auto">
     <!-- Hero Section -->
     <HeroSection />
     
-    <!-- Recent Posts Section -->
-    <PostsSection />
+    <!-- Skills Section -->
+    <SkillsSection />
     
     <!-- Featured Works Section -->
     <WorksSection />
@@ -15,7 +15,7 @@
 <script setup>
 // Import section components
 import HeroSection from '@/components/home/HeroSection.vue'
-import PostsSection from '@/components/home/PostsSection.vue'
+import SkillsSection from '@/components/home/SkillsSection.vue';
 import WorksSection from '@/components/home/WorksSection.vue'
 </script>
 
