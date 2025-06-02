@@ -8,9 +8,8 @@
           <span class="text-primary">Creative Technologist</span>
         </h1>
         <p class="mb-6 text-lg">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-          Velit officia consequat duis enim velit mollit. Exercitation veniam 
-          consequat sunt nostrud amet.
+          a passionate developer with a strong background in ICT and a keen eye for meaningful digital experiences. 
+          I specialize in creating user-centered web and mobile applications that combine functionality with elegance. Whether I’m building powerful backend systems or designing clean user interfaces, I strive to craft solutions that make a real impact. Explore my portfolio to see some of the projects I've worked on — from personal apps to community-focused tools that solve everyday problems.
         </p>
         <button class="px-6 py-3 text-white transition rounded bg-primary hover:bg-primary-dark">
           <a 
