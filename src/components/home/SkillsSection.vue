@@ -12,17 +12,17 @@
 <script setup>
 const skills = [
   {
-    image: '/assets/Silika_Arc.png',
+    image: '/Silika_Arc.png',
     title: 'Product design',
     description: 'This is a template Figma file, turned into code using Anima.',
   },
   {
-    image: '/skills/art-direction.svg',
+    image: '/Silika_Arc.png',
     title: 'Art direction',
     description: 'This is a template Figma file, turned into code using Anima.',
   },
   {
-    image: '/skills/visual-design.svg',
+    image: '/Silika_Arc.png',
     title: 'Visual design',
     description: 'This is a template Figma file, turned into code using Anima.',
   },

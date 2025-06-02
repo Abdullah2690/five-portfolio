@@ -16,7 +16,7 @@ const routes = [
     component: WorksView
   },
   {
-    path: '/views/:id',
+    path: '/works/:slug',
     name: 'work-detail',
     component: WorkDetailView,
     props: true

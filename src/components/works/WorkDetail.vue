@@ -1,29 +1,32 @@
 <template>
   <article>
     <!-- Work Title and Subtitle -->
-    <h1 class="text-3xl md:text-4xl font-bold mb-2">{{ work.title }}</h1>
+    <h1 class="mb-2 text-3xl font-bold md:text-4xl">{{ work.title }}</h1>
     <div class="flex items-center gap-4 mb-8">
-      <span class="bg-dark text-white px-3 py-1 rounded-full text-sm font-bold">
+      <span class="px-3 py-1 text-sm font-bold text-white rounded-full bg-dark">
         {{ work.year }}
       </span>
       <span class="text-gray-500">{{ work.category }}</span>
     </div>
     
     <!-- Work Content -->
-    <div class="prose max-w-none">
+  
+      
       <!-- Featured Image -->
+      <div class="prose max-w-none">
       <img 
-        :src="work.featuredImage" 
-        :alt="work.title"
-        class="w-full h-auto rounded-lg mb-8"
-      >
+        :src="imageUrl" 
+        :alt="work.title" 
+        class="w-full h-auto mb-8 rounded-lg" 
+      />
+
       
       <!-- Work Description -->
-      <p class="text-lg mb-6">{{ work.description }}</p>
+      <p class="mb-6 text-lg">{{ work.description }}</p>
       
       <!-- Additional Content (from your screenshot) -->
-      <h2 class="text-2xl font-bold mb-4">Heading 1</h2>
-      <h3 class="text-xl font-semibold mb-3">Heading 2</h3>
+      <h2 class="mb-4 text-2xl font-bold">Heading 1</h2>
+      <h3 class="mb-3 text-xl font-semibold">Heading 2</h3>
       <p class="mb-6">{{ work.additionalContent }}</p>
     </div>
   </article>
@@ -31,12 +34,11 @@
 
 <script setup>
 defineProps({
-  work: {
-    type: Object,
-    required: true
-  }
+  work: Object,
+  imageUrl: String
 })
 </script>
+
 
 <style scoped>
 /* Custom styling for the content */

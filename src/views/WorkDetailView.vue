@@ -1,15 +1,10 @@
 <template>
-  <main class="container mx-auto px-4 py-8">
-    <!-- Back button to return to works list -->
-    <router-link 
-      to="/works" 
-      class="inline-block mb-6 text-secondary hover:underline"
-    >
+  <main class="container px-4 py-8 mx-auto">
+    <router-link to="/works" class="inline-block mb-6 text-secondary hover:underline">
       ← Back to Works
     </router-link>
-    
-    <!-- Work Detail Component -->
-    <WorkDetail :work="work" v-if="work" />
+
+    <WorkDetail :work="work" :imageUrl="imageUrl" v-if="work && imageUrl" />
   </main>
 </template>
 
@@ -21,15 +16,32 @@ import WorkDetail from '@/components/works/WorkDetail.vue'
 
 const route = useRoute()
 const work = ref(null)
+const imageUrl = ref(null)
 
 onMounted(async () => {
-  // Fetch single work based on URL slug
-  const { data } = await supabase
+  const { data, error } = await supabase
     .from('works')
     .select('*')
     .eq('slug', route.params.slug)
     .single()
-    
+
+  if (error) {
+    console.error('Error fetching work:', error)
+    return
+  }
+
   work.value = data
+
+  // Generate public URL from Supabase Storage
+  const { data: publicData, error: urlError } = supabase
+    .storage
+    .from('content-bucket') // 🔁 Replace this
+    .getPublicUrl(data.featuredImage)
+
+  if (urlError) {
+    console.error('Error getting image URL:', urlError)
+  } else {
+    imageUrl.value = publicData.publicUrl
+  }
 })
 </script>
