@@ -19,7 +19,7 @@
             target="_blank" 
             rel="noopener"
           >
-  Download CV
+  Download Resume
 </a>
         </button>
       </div>
