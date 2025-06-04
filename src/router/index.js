@@ -22,6 +22,17 @@ const routes = [
     props: true
   },
   {
+  path: '/skills',
+  name: 'skills',
+  component: () => import('@/views/SkillsView.vue')
+},
+{
+  path: '/skills/:slug',
+  name: 'skill-detail',
+  component: () => import('@/views/SkillDetailView.vue'),
+  props: true
+},
+  {
     path: '/contact',  // Define the new route for the contact page
     name: 'contact',
     component: ContactView  // Add the new route

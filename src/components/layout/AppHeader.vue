@@ -11,8 +11,9 @@
 
         <!-- Desktop Menu -->
         <div class="hidden space-x-8 md:flex">
-          <router-link to="/works" class="nav-link" active-class="text-primary">Works</router-link>
-          <router-link to="/contact" class="nav-link" active-class="text-primary">Contact</router-link>
+          <router-link to="/skills" class="font-medium text-gray-600 transition hover:text-primary" active-class="text-primary">Skills</router-link>
+          <router-link to="/works" class="font-medium text-gray-600 transition hover:text-primary" active-class="text-primary">Works</router-link>
+          <router-link to="/contact" class="font-medium text-gray-600 transition hover:text-primary" active-class="text-primary">Contact</router-link>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -53,8 +54,16 @@
         <!-- Mobile Nav Links -->
         <div class="space-y-4">
           <router-link 
+            to="/skills" 
+            class="block font-medium text-gray-600 transition hover:text-primary" 
+            active-class="text-primary"
+            @click="showSidebar = false" 
+          >
+            Skills
+          </router-link>
+          <router-link 
             to="/works" 
-            class="block nav-link" 
+            class="block font-medium text-gray-600 transition hover:text-primary" 
             active-class="text-primary"
             @click="showSidebar = false"
           >
@@ -80,9 +89,6 @@ const showSidebar = ref(false)
 </script>
 
 <style scoped>
-.nav-link {
-  @apply font-medium text-gray-600 hover:text-primary transition;
-}
 .translate-x-full {
   transform: translateX(100%);
 }

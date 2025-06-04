@@ -5,7 +5,7 @@
       <div class="flex justify-center mb-4 space-x-6">
         <!-- LinkedIn -->
         <a 
-          href="https://www.linkedin.com/in/yourprofile" 
+          href="https://www.linkedin.com/in/abdullah silika" 
           target="_blank" 
           rel="noopener noreferrer"
           class="text-gray-500 transition-colors duration-300 hover:text-blue-600"
@@ -18,7 +18,7 @@
 
         <!-- Instagram -->
         <a 
-          href="https://www.instagram.com/yourprofile" 
+          href="https://www.instagram.com/abdullahmuhammads" 
           target="_blank" 
           rel="noopener noreferrer"
           class="text-gray-500 transition-colors duration-300 hover:text-pink-600"
@@ -31,7 +31,7 @@
 
         <!-- X (Twitter) -->
         <a 
-          href="https://twitter.com/yourprofile" 
+          href="https://twitter.com/SilikaAbdullah" 
           target="_blank" 
           rel="noopener noreferrer"
           class="text-gray-500 transition-colors duration-300 hover:text-gray-800"
@@ -39,6 +39,19 @@
         >
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a 
+          href="https://www.facebook.com/Abdullah M Silika" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-gray-500 hover:text-[#1877F2] transition-colors duration-300"
+          aria-label="Facebook"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/>
           </svg>
         </a>
       </div>
@@ -53,11 +66,14 @@
 
 <script setup>
 // Replace with your actual name
-const yourName = "Your Name";
+const yourName = "Abdullah Silika";
 </script>
 
 <style scoped>
 /* Custom hover effects */
+a {
+  transition: all 0.3s ease;
+}
 a:hover {
   transform: translateY(-2px);
 }

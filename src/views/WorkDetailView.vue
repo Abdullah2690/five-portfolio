@@ -36,12 +36,14 @@ onMounted(async () => {
   const { data: publicData, error: urlError } = supabase
     .storage
     .from('content-bucket') // 🔁 Replace this
-    .getPublicUrl(data.featuredImage)
+    .getPublicUrl(data.featured_image)
 
   if (urlError) {
     console.error('Error getting image URL:', urlError)
   } else {
     imageUrl.value = publicData.publicUrl
   }
+
+  console.log('Featured image path:', data.featured_image)
 })
 </script>

@@ -74,7 +74,7 @@
             </svg>
             <div>
               <h3 class="font-medium">Email</h3>
-              <p class="text-gray-600">contact@yourportfolio.com</p>
+              <p class="text-gray-600">contact: silikaabdullah@gmail.com</p>
             </div>
           </div>
           
@@ -84,7 +84,7 @@
             </svg>
             <div>
               <h3 class="font-medium">Phone</h3>
-              <p class="text-gray-600">+1 (123) 456-7890</p>
+              <p class="text-gray-600">+265 (099) 100 - 6765</p>
             </div>
           </div>
         </div>
