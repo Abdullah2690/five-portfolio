@@ -3,6 +3,8 @@ import HomeView from '@/views/HomeView.vue'
 import WorksView from '@/views/WorksView.vue'
 import WorkDetailView from '@/views/WorkDetailView.vue'
 import ContactView from '@/views/ContactView.vue'  // Import the new ContactView
+import PrivacyPolicy from '@/views/PrivacyPolicy.vue'
+import FaqView from '@/views/FaqView.vue'
 
 const routes = [
   {
@@ -25,18 +27,29 @@ const routes = [
   path: '/skills',
   name: 'skills',
   component: () => import('@/views/SkillsView.vue')
-},
-{
-  path: '/skills/:slug',
-  name: 'skill-detail',
-  component: () => import('@/views/SkillDetailView.vue'),
-  props: true
-},
+  },
+  {
+    path: '/skills/:slug',
+    name: 'skill-detail',
+    component: () => import('@/views/SkillDetailView.vue'),
+    props: true
+  },
   {
     path: '/contact',  // Define the new route for the contact page
     name: 'contact',
     component: ContactView  // Add the new route
+  },
+  {
+    path: '/privacy',
+    name: 'privacy',
+    component: PrivacyPolicy
+  },
+  {
+    path: '/faq',
+    name: 'faq',
+    component: FaqView
   }
+
   // Add other routes as needed
 ]
 

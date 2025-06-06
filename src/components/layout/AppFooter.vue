@@ -5,7 +5,7 @@
       <div class="flex justify-center mb-4 space-x-6">
         <!-- LinkedIn -->
         <a 
-          href="https://www.linkedin.com/in/abdullah silika" 
+          href="https://www.linkedin.com/in/abdullah-silika" 
           target="_blank" 
           rel="noopener noreferrer"
           class="text-gray-500 transition-colors duration-300 hover:text-blue-600"
@@ -44,7 +44,7 @@
 
         <!-- Facebook -->
         <a 
-          href="https://www.facebook.com/Abdullah M Silika" 
+          href="https://www.facebook.com/AbdullahMSilika" 
           target="_blank" 
           rel="noopener noreferrer"
           class="text-gray-500 hover:text-[#1877F2] transition-colors duration-300"
@@ -54,6 +54,33 @@
             <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/>
           </svg>
         </a>
+      </div>
+
+      <!-- Legal Links -->
+      <div class="flex justify-center mb-4 space-x-6 text-sm">
+        <router-link 
+          to="/privacy" 
+          class="text-gray-500 transition-colors duration-300 hover:text-primary"
+          active-class="font-medium text-primary"
+        >
+          Privacy Policy
+        </router-link>
+        <span class="text-gray-400">•</span>
+        <router-link 
+          to="/faq" 
+          class="text-gray-500 transition-colors duration-300 hover:text-primary"
+          active-class="font-medium text-primary"
+        >
+          FAQ
+        </router-link>
+        <span class="text-gray-400">•</span>
+        <router-link 
+          to="/contact" 
+          class="text-gray-500 transition-colors duration-300 hover:text-primary"
+          active-class="font-medium text-primary"
+        >
+          Contact
+        </router-link>
       </div>
       
       <!-- Copyright Notice -->
@@ -76,5 +103,13 @@ a {
 }
 a:hover {
   transform: translateY(-2px);
+}
+
+/* Legal links styling */
+.legal-links a {
+  @apply px-2 py-1 rounded;
+}
+.legal-links a:hover {
+  @apply bg-gray-50;
 }
 </style>

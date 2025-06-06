@@ -6,8 +6,7 @@
     
     <!-- Skills Section -->
     <section class="py-12 bg-gray-50">
-    <h2 class="mb-8 text-2xl font-medium">Featured Skills</h2>
-    <SkillsSection :limit="3" />
+      <SkillsSection :limit="3" />
     </section>
     
     <!-- Featured Works Section -->
