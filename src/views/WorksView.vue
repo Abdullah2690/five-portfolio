@@ -1,33 +1,45 @@
 <template>
-  <main class="container px-4 py-8 mx-auto">
-    <h1 class="mb-8 text-3xl font-bold">Work</h1>
-    
-    <!-- Work List Component -->
-    <WorkList :works="works" />
-  </main>
-  <section class="container px-4 py-8 mx-auto">
-    <!-- <h2 class="mb-4 text-2xl font-bold">Add New Work</h2> -->
-    
-    <!-- Add Work Form Component -->
-    <!-- <AddWorkForm /> -->
-  </section>
+  <div v-if="loading" class="py-10 text-center text-gray-500">Loading...</div>
+
+  <WorkDetail 
+    v-else-if="work" 
+    :work="work" 
+    :imageUrl="work.featured_image" 
+  />
+
+  <div v-else class="py-10 text-center text-red-500">Work not found.</div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { supabase } from '@/composables/useSupabase'
-import WorkList from '@/components/works/WorkList.vue'
-//import AddWorkForm from '@/components/works/AddWorkForm.vue'
+import { useRoute } from 'vue-router'
+import { createClient } from '@supabase/supabase-js'
+import WorkDetail from '@/components/works/WorkList.vue' // adjust path as needed
 
-const works = ref([])
+const route = useRoute()
+const slug = route.params.slug
+
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_ANON_KEY
+)
+
+const work = ref(null)
+const loading = ref(true)
 
 onMounted(async () => {
-  // Fetch all works from Supabase, ordered by year (newest first)
-  const { data } = await supabase
-    .from('works')
+  const { data, error } = await supabase
+    .from('work')
     .select('*')
-    .order('year', { ascending: false })
-    
-  works.value = data
+    .eq('slug', slug)
+    .single()
+
+  if (error) {
+    console.error('Error fetching work:', error)
+  } else {
+    work.value = data
+  }
+
+  loading.value = false
 })
 </script>
