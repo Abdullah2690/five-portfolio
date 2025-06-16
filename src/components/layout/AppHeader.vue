@@ -7,7 +7,7 @@
           class="flex items-center space-x-2 text-xl font-bold transition text-dark hover:text-primary"
         >
           <img 
-            src="@/assets/Capital Five logo.png" 
+            src="@/assets/Pineapple.png"
             alt="Logo" 
             class="object-contain w-11 h-11"
           />

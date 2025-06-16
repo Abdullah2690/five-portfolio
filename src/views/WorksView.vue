@@ -1,45 +1,35 @@
 <template>
-  <div v-if="loading" class="py-10 text-center text-gray-500">Loading...</div>
+  <div class="container px-4 py-12 mx-auto">
+    <h1 class="mb-8 text-3xl font-bold">My Work</h1>
 
-  <WorkDetail 
-    v-else-if="work" 
-    :work="work" 
-    :imageUrl="work.featured_image" 
-  />
-
-  <div v-else class="py-10 text-center text-red-500">Work not found.</div>
+    <div v-if="loading" class="text-center text-gray-500">Loading works...</div>
+    <div v-else-if="error" class="text-center text-red-500">{{ error }}</div>
+    <WorksList :works="works" v-else />
+  </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-import { createClient } from '@supabase/supabase-js'
-import WorkDetail from '@/components/works/WorkList.vue' // adjust path as needed
+import WorksList from '@/components/works/WorkList.vue'
+import { supabase } from '@/composables/useSupabase'
 
-const route = useRoute()
-const slug = route.params.slug
-
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-)
-
-const work = ref(null)
+const works = ref([])
 const loading = ref(true)
+const error = ref(null)
 
 onMounted(async () => {
-  const { data, error } = await supabase
-    .from('work')
-    .select('*')
-    .eq('slug', slug)
-    .single()
+  try {
+    const { data, error: supabaseError } = await supabase
+      .from('works')
+      .select('*')
 
-  if (error) {
-    console.error('Error fetching work:', error)
-  } else {
-    work.value = data
+    if (supabaseError) throw supabaseError
+    works.value = data
+  } catch (err) {
+    error.value = err.message
+    console.error('Error fetching works:', err)
+  } finally {
+    loading.value = false
   }
-
-  loading.value = false
 })
 </script>

@@ -19,14 +19,14 @@ const routes = [
   },
   {
     path: '/works/:slug',
-    name: 'work-detail',
-    component: WorkDetailView,
+    name: 'workDetail',
+    component: WorkDetailView, // ✅ Corrected
     props: true
   },
   {
-  path: '/skills',
-  name: 'skills',
-  component: () => import('@/views/SkillsView.vue')
+    path: '/skills',
+    name: 'skills',
+    component: () => import('@/views/SkillsView.vue')
   },
   {
     path: '/skills/:slug',
@@ -35,9 +35,9 @@ const routes = [
     props: true
   },
   {
-    path: '/contact',  // Define the new route for the contact page
+    path: '/contact',
     name: 'contact',
-    component: ContactView  // Add the new route
+    component: ContactView
   },
   {
     path: '/privacy',
@@ -49,9 +49,8 @@ const routes = [
     name: 'faq',
     component: FaqView
   }
-
-  // Add other routes as needed
 ]
+
 
 const router = createRouter({
   history: createWebHashHistory(), // ← changed this line
