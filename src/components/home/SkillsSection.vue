@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- Section Heading -->
-    <h2 class="mb-6 text-2xl font-medium">Featured skills</h2>
-
     <!-- Skills Grid -->
     <section class="grid grid-cols-1 gap-8 text-center md:grid-cols-3">
       <div v-if="loading" class="col-span-3 text-center">Loading skills...</div>
@@ -12,7 +9,7 @@
       <div
         v-for="skill in displayedSkills"
         :key="skill.id"
-        class="cursor-pointer skill-card"
+        class="p-6 transition-shadow bg-white rounded-lg shadow cursor-pointer hover:shadow-md"
         @click="openSkillModal(skill)"
       >
         <img
@@ -122,7 +119,5 @@ onMounted(fetchSkills)
 </script>
 
 <style scoped>
-.skill-card {
-  @apply p-6 bg-white rounded-lg shadow hover:shadow-md transition-shadow;
-}
+/* No additional CSS needed; Tailwind classes are used directly in the template */
 </style>
