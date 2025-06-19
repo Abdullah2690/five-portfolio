@@ -1,1 +1,0 @@
-import{c as s,a as t,b as a,S as o,o as l}from"./index-BlK4LXu6.js";const n={class:"container px-4 py-12 mx-auto"},m={__name:"SkillsView",setup(c){return(r,e)=>(l(),s("main",n,[e[0]||(e[0]=t("h1",{class:"mb-8 text-3xl font-bold"},"My Skills",-1)),a(o)]))}};export{m as default};
