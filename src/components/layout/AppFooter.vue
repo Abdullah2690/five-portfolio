@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-8 bg-white border-t border-gray-100">
+  <footer class="py-8 transition-colors duration-300 bg-white border-t border-gray-100 dark:bg-gray-800 dark:border-gray-800">
     <div class="container px-4 mx-auto">
       <!-- Social Icons -->
       <div class="flex justify-center mb-4 space-x-6">
@@ -8,7 +8,7 @@
           href="https://www.linkedin.com/in/abdullah-silika" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-gray-500 transition-colors duration-300 hover:text-blue-600"
+          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
           aria-label="LinkedIn"
         >
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -21,7 +21,7 @@
           href="https://www.instagram.com/abdullahmuhammads" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-gray-500 transition-colors duration-300 hover:text-pink-600"
+          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-400"
           aria-label="Instagram"
         >
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -34,7 +34,7 @@
           href="https://twitter.com/SilikaAbdullah" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-gray-500 transition-colors duration-300 hover:text-gray-800"
+          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
           aria-label="X (Twitter)"
         >
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -47,7 +47,7 @@
           href="https://www.facebook.com/AbdullahMSilika" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-gray-500 hover:text-[#1877F2] transition-colors duration-300"
+          class="text-gray-500 dark:text-gray-400 hover:text-[#1877F2] transition-colors duration-300"
           aria-label="Facebook"
         >
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -60,31 +60,31 @@
       <div class="flex justify-center mb-4 space-x-6 text-sm">
         <router-link 
           to="/privacy" 
-          class="text-gray-500 transition-colors duration-300 hover:text-primary"
-          active-class="font-medium text-primary"
+          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400"
+          active-class="font-medium text-primary dark:text-primary-400"
         >
           Privacy Policy
         </router-link>
-        <span class="text-gray-400">•</span>
+        <span class="text-gray-400 dark:text-gray-600">•</span>
         <router-link 
           to="/faq" 
-          class="text-gray-500 transition-colors duration-300 hover:text-primary"
-          active-class="font-medium text-primary"
+          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400"
+          active-class="font-medium text-primary dark:text-primary-400"
         >
           FAQ
         </router-link>
-        <span class="text-gray-400">•</span>
+        <span class="text-gray-400 dark:text-gray-600">•</span>
         <router-link 
           to="/contact" 
-          class="text-gray-500 transition-colors duration-300 hover:text-primary"
-          active-class="font-medium text-primary"
+          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400"
+          active-class="font-medium text-primary dark:text-primary-400"
         >
           Contact
         </router-link>
       </div>
       
       <!-- Copyright Notice -->
-      <p class="text-sm text-center text-gray-500">
+      <p class="text-sm text-center text-gray-500 dark:text-gray-400">
         Copyright © {{ new Date().getFullYear() }} {{ yourName }}. All rights reserved.
       </p>
     </div>
@@ -110,6 +110,6 @@ a:hover {
   @apply px-2 py-1 rounded;
 }
 .legal-links a:hover {
-  @apply bg-gray-50;
+  @apply bg-gray-50 dark:bg-gray-800;
 }
 </style>
