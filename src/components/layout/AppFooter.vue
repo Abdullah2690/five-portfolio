@@ -47,7 +47,7 @@
           href="https://www.facebook.com/AbdullahMSilika" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-blue-600"
+          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
           aria-label="Facebook"
         >
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
