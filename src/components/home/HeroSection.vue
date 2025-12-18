@@ -20,7 +20,7 @@
         <div class="flex flex-wrap items-center gap-4">
           <!-- Download Resume Button -->
           <a 
-            href="https://afkwkgamqajfgxxfureb.supabase.co/storage/v1/object/public/content-bucket//Abdullah%20Silika%20CV.pdf" 
+            href="https://ztmuorvnvylnqysozdfy.supabase.co/storage/v1/object/public/documents/Abdullah%20Silika%20CV.pdf"
             download 
             target="_blank" 
             rel="noopener"
