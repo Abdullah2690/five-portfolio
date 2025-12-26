@@ -110,18 +110,40 @@ const isSubmitting = ref(false)
 const error = ref('')
 const success = ref(false)
 
+const submitContactForm = async (name, email, message) => {
+  // 1. Insert into database
+  const { error } = await supabase.from('contacts').insert({
+    name,
+    email,
+    message
+  })
+
+  if (error) {
+    throw new Error(error.message)
+  }
+
+  // 2. Call edge function
+  const { error: funcError } = await supabase.functions.invoke('contact-email', {
+    body: {
+      name,
+      email,
+      message
+    }
+  })
+
+  if (funcError) {
+    throw new Error(funcError.message)
+  }
+}
+
 async function handleSubmit() {
   try {
     isSubmitting.value = true
     error.value = ''
     success.value = false
     
-    // Save to Supabase
-    const { error: dbError } = await supabase
-      .from('contacts')
-      .insert([form.value])
-    
-    if (dbError) throw dbError
+    // Save to Supabase and send email
+    await submitContactForm(form.value.name, form.value.email, form.value.message)
     
     // Reset form on success
     form.value = { name: '', email: '', message: '' }

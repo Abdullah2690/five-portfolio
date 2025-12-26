@@ -16,6 +16,7 @@
 
         <!-- Desktop Menu -->
         <div class="items-center hidden space-x-6 md:flex">
+          <router-link to="/" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary">Home</router-link>
           <router-link to="/skills" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary">Skills</router-link>
           <router-link to="/works" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary">Works</router-link>
           <router-link to="/contact" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary">Contact</router-link>

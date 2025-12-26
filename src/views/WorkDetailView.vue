@@ -58,7 +58,7 @@ onMounted(async () => {
   try {
     loading.value = true
     error.value = null
-    
+
     // Fetch work data
     const { data, error: fetchError } = await supabase
       .from('works')
@@ -71,15 +71,22 @@ onMounted(async () => {
     
     work.value = data
 
-    // Get image URL from Supabase Storage
-    const { data: publicData, error: urlError } = supabase
-      .storage
-      .from('content-bucket') // Replace with your bucket name
-      .getPublicUrl(data.featured_image)
+    // Resolve image URL:
+    const featured = data.featured_image || ''
+    if (featured.startsWith('http')) {
+      // already a full URL (do not call getPublicUrl)
+      imageUrl.value = featured
+    } else if (featured) {
+      const { data: publicData, error: urlError } = await supabase
+        .storage
+        .from('works') // bucket name
+        .getPublicUrl(featured)
 
-    if (urlError) throw urlError
-    
-    imageUrl.value = publicData.publicUrl
+      if (urlError) throw urlError
+      imageUrl.value = publicData?.publicUrl || null
+    } else {
+      imageUrl.value = null
+    }
   } catch (err) {
     error.value = err.message || 'Failed to load project details'
     console.error('Error:', err)
