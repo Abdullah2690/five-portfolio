@@ -71,7 +71,10 @@ export const theme = {
         900: '#111827',
       },
 
-      // Dark Mode Colors
+      // Single color definitions for text-dark and text-light
+      light: '#F9FAFB', // Light text color (matches gray-50)
+
+      // Dark Mode Colors (renamed to avoid conflict)
       dark: {
         bg: '#0f172a',             // Background
         card: '#1e293b',           // Card & Section BG

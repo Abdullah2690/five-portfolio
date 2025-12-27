@@ -48,8 +48,17 @@ const routes = [
     path: '/faq',
     name: 'faq',
     component: FaqView
-  }
-]
+  },
+  {
+  path: '/about',
+  name: 'about',
+  component: () => import('@/views/AboutView.vue')
+},
+{
+  path: '/donate',
+  name: 'donate',
+  component: () => import('@/views/DonateView.vue')
+}]
 
 
 const router = createRouter({

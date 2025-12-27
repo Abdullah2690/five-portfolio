@@ -104,6 +104,6 @@ article {
 }
 
 .prose :deep(code) {
-  @apply px-2 py-1 text-sm rounded dark:bg-dark-card;
+  @apply px-2 py-1 text-sm rounded bg-gray-100 dark:bg-dark-card;
 }
 </style>
