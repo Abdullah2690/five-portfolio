@@ -49,10 +49,11 @@
           Background
         </h2>
         <p class="leading-relaxed text-gray-700 dark:text-gray-300">
-          I hold a degree in Information and Communication Technology and two
-          diplomas in Computing and Information Systems. I have experience
-          building both web and mobile applications with a strong focus on
-          usability and performance.
+          I hold a degree in Information and Communication Technology, 
+          along with two diplomas in Computing and Information Systems. 
+          In addition, I have earned certificates in Computing and Information Systems and Cyber Security. 
+          I have experience building both web and mobile applications, 
+          with a strong focus on usability, performance, and secure system design.
         </p>
       </div>
 
@@ -83,7 +84,8 @@
         <p class="leading-relaxed text-gray-700 dark:text-gray-300">
           I value clarity, consistency, and simplicity. My long-term goal is to
           build impactful digital products, particularly in education,
-          faith-based platforms, and solutions that support local communities.
+          faith-based platforms, and solutions that support local communities. I also value continuous self-development, 
+          including language learning, which has helped me build focus, adaptability, and cross-cultural awareness.
         </p>
       </div>
     </section>
@@ -92,7 +94,7 @@
 
 <script setup>
 const cvUrl =
-  'https://ztmuorvnvylnqysozdfy.supabase.co/storage/v1/object/public/documents/Abdullah%20Silika%20CV.pdf'
+  'https://ztmuorvnvylnqysozdfy.supabase.co/storage/v1/object/public/documents/Abdullah%20M%20Silika%20CV.pdf'
 </script>
 
 <style scoped>

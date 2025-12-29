@@ -59,19 +59,19 @@
       <!-- Legal Links -->
       <div class="flex justify-center mb-4 space-x-6 text-sm">
         <router-link 
-          to="/privacy" 
-          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400"
-          active-class="font-medium text-primary dark:text-primary-400"
-        >
-          Privacy Policy
-        </router-link>
-        <span class="text-gray-400 dark:text-gray-600">•</span>
-        <router-link 
           to="/faq" 
           class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400"
           active-class="font-medium text-primary dark:text-primary-400"
         >
           FAQ
+        </router-link>
+        <span class="text-gray-400 dark:text-gray-600">•</span>
+        <router-link 
+          to="/privacy" 
+          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400"
+          active-class="font-medium text-primary dark:text-primary-400"
+        >
+          Privacy Policy
         </router-link>
         <span class="text-gray-400 dark:text-gray-600">•</span>
         <router-link 
@@ -82,14 +82,6 @@
           Contact
         </router-link>
 
-        <span class="text-gray-400 dark:text-gray-600">•</span>
-        <router-link 
-          to="/donate" 
-          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400"
-          active-class="font-medium text-primary dark:text-primary-400"
-        >
-          Donate
-        </router-link>
       </div>
       
       <!-- Copyright Notice -->
