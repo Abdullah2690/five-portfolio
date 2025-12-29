@@ -81,6 +81,15 @@
         >
           Contact
         </router-link>
+
+        <span class="text-gray-400 dark:text-gray-600">•</span>
+        <router-link 
+          to="/donate" 
+          class="text-gray-500 transition-colors duration-300 dark:text-gray-400 hover:text-primary dark:hover:text-primary-400"
+          active-class="font-medium text-primary dark:text-primary-400"
+        >
+          Donate
+        </router-link>
       </div>
       
       <!-- Copyright Notice -->
@@ -103,13 +112,5 @@ a {
 }
 a:hover {
   transform: translateY(-2px);
-}
-
-/* Legal links styling */
-.legal-links a {
-  @apply px-2 py-1 rounded;
-}
-.legal-links a:hover {
-  @apply bg-gray-50 dark:bg-gray-800;
 }
 </style>

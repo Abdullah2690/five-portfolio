@@ -1,5 +1,5 @@
 <template>
-  <main class="container px-4 py-16 mx-auto">
+  <main class="container px-4 py-12 mx-auto">
     <!-- Hero Section -->
     <section class="grid items-center gap-12 mb-24 md:grid-cols-3">
       <!-- Intro Text -->
@@ -92,19 +92,27 @@
 
 <script setup>
 const cvUrl =
-  'https://YOUR_PROJECT_ID.supabase.co/storage/v1/object/public/documents/cv/abdullah-silika-cv.pdf'
+  'https://ztmuorvnvylnqysozdfy.supabase.co/storage/v1/object/public/documents/Abdullah%20Silika%20CV.pdf'
 </script>
 
 <style scoped>
-  section > div {
+  /* Match global page width */
+.container {
+  max-width: 860px;
+}
+
+/* Subtle card interaction */
+section > div {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 section > div:hover {
   transform: translateY(-2px);
 }
+
 section > div:active {
   transform: translateY(0);
   box-shadow: none;
 }
+
 </style>

@@ -96,14 +96,32 @@ article {
 }
 
 .prose :deep(img) {
-  @apply rounded-lg shadow-md dark:shadow-dark-glow;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.dark .prose :deep(img) {
+  box-shadow: 0 4px 14px 0 rgba(125, 211, 252, 0.2);
 }
 
 .prose :deep(a) {
-  @apply text-primary hover:underline dark:text-primary-dark;
+  color: #FF6464;
+  text-decoration: none;
+}
+.prose :deep(a):hover {
+  text-decoration: underline;
+}
+.dark .prose :deep(a) {
+  color: #FF8383;
 }
 
 .prose :deep(code) {
-  @apply px-2 py-1 text-sm rounded bg-gray-100 dark:bg-dark-card;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 0.25rem;
+  background-color: rgb(243 244 246);
+}
+.dark .prose :deep(code) {
+  background-color: #1e293b;
 }
 </style>

@@ -16,12 +16,12 @@
 
         <!-- Desktop Menu -->
         <div class="items-center hidden space-x-6 md:flex">
-          <router-link to="/" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary">Home</router-link>
-          <router-link to="/skills" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary">Skills</router-link>
-          <router-link to="/works" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary">Works</router-link>
-          <router-link to="/about" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary">About</router-link>
-          <router-link to="/contact" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary">Contact</router-link>
-          <router-link to="/donate" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary">Donate</router-link>
+          <router-link to="/" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary dark:text-primary">Home</router-link>
+          <router-link to="/skills" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary dark:text-primary">Skills</router-link>
+          <router-link to="/works" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary dark:text-primary">Works</router-link>
+          <router-link to="/about" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary dark:text-primary">About</router-link>
+          <router-link to="/contact" class="font-medium text-gray-600 transition hover:text-primary dark:text-gray-300 dark:hover:text-primary" active-class="text-primary dark:text-primary">Contact</router-link>
+          <router-link to="/donate" class="px-4 py-2 font-semibold text-white transition rounded-lg bg-primary hover:bg-primary-dark dark:bg-primary-dark dark:hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">Donate</router-link>
 
           <!-- 🌙 Dark Mode Toggle Button -->
           <button 
@@ -71,46 +71,46 @@
 
         <!-- Mobile Nav Links -->
         <nav class="flex-1 space-y-4">
-          <router-link to="/" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-500 text-primary" @click="showSidebar = false">
+          <router-link to="/" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="text-white bg-primary dark:bg-primary-dark dark:text-white" @click="showSidebar = false">
             <HomeIcon class="w-5 h-5 mr-3" />
             Home
           </router-link>
 
-          <router-link to="/skills" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-500 text-primary" @click="showSidebar = false">
+          <router-link to="/skills" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="text-white bg-primary dark:bg-primary-dark dark:text-white" @click="showSidebar = false">
             <CommandLineIcon class="w-5 h-5 mr-3" />
             Skills
           </router-link>
 
-          <router-link to="/works" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-500 text-primary" @click="showSidebar = false">
+          <router-link to="/works" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="text-white bg-primary dark:bg-primary-dark dark:text-white" @click="showSidebar = false">
             <BriefcaseIcon class="w-5 h-5 mr-3" />
             Works
           </router-link>
 
-          <router-link to="/about" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-500 text-primary" @click="showSidebar = false">
+          <router-link to="/about" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-400 text-gray" @click="showSidebar = false">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             About
           </router-link>
 
-          <router-link to="/contact" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-500 text-primary" @click="showSidebar = false">
+          <router-link to="/contact" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-400 text-gray" @click="showSidebar = false">
             <EnvelopeIcon class="w-5 h-5 mr-3" />
             Contact
           </router-link>
 
-          <router-link to="/donate" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-500 text-primary" @click="showSidebar = false">
+          <router-link to="/donate" class="flex items-center p-3 font-semibold transition border-2 rounded-lg text-primary border-primary hover:bg-primary hover:text-white dark:text-primary-dark dark:border-primary-dark dark:hover:bg-primary-dark dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" active-class="text-white bg-primary border-primary dark:bg-primary-dark dark:text-white dark:border-primary-dark" @click="showSidebar = false">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.657 0 3-.895 3-2s-1.343-2-3-2-3 .895-3 2 1.343 2 3 2zm0 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2" />
             </svg>
             Donate
           </router-link>
 
-          <router-link to="/privacy" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-500 text-primary" @click="showSidebar = false">
+          <router-link to="/privacy" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-400 text-gray" @click="showSidebar = false">
             <ShieldCheckIcon class="w-5 h-5 mr-3" />
             Privacy
           </router-link>
 
-          <router-link to="/faq" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-500 text-primary" @click="showSidebar = false">
+          <router-link to="/faq" class="flex items-center p-2 font-medium text-gray-600 transition rounded-lg hover:text-primary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700" active-class="bg-primary-400 text-gray" @click="showSidebar = false">
             <QuestionMarkCircleIcon class="w-5 h-5 mr-3" />
             FAQ
           </router-link>

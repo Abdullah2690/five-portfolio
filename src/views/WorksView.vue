@@ -1,7 +1,19 @@
 <template>
   <main class="flex justify-center w-full px-4 py-12">
     <div class="w-full max-w-4xl">
-      <h1 class="mb-8 text-3xl font-bold text-gray-900 dark:text-dark-text">My Work</h1>
+
+      <!-- Header with subtle decoration -->
+      <div class="mb-12 text-center">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-dark-text md:text-4xl">
+          <span class="relative inline-block">
+            My Work
+            <span class="absolute bottom-0 left-0 w-full h-1 -mb-1 bg-primary dark:bg-primary-dark opacity-20"></span>
+          </span>
+        </h1>
+        <p class="max-w-2xl mx-auto mt-4 text-gray-600 dark:text-dark-muted">
+          Selected projects that showcase my skills, creativity, and real-world problem solving
+        </p>
+      </div>
 
       <!-- Loading State -->
       <div 

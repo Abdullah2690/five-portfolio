@@ -1,7 +1,19 @@
 <template>
   <main class="flex justify-center w-full px-4 py-8">
     <div class="w-full max-w-4xl">
-      <h1 class="mb-8 text-3xl font-bold text-gray-900 dark:text-dark-text">Contact Me</h1>
+
+      <!-- Header with subtle decoration -->
+      <div class="mb-12 text-center">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-dark-text md:text-4xl">
+          <span class="relative inline-block">
+            Contact Me
+            <span class="absolute bottom-0 left-0 w-full h-1 -mb-1 bg-primary dark:bg-primary-dark opacity-20"></span>
+          </span>
+        </h1>
+        <p class="max-w-2xl mx-auto mt-4 text-gray-600 dark:text-dark-muted">
+          Let's connect and discuss ideas, opportunities, or collaborations
+        </p>
+      </div>
       
       <div class="grid gap-12 md:grid-cols-2">
         <!-- Contact Form -->

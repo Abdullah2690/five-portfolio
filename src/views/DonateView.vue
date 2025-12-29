@@ -1,9 +1,18 @@
 <template>
   <main class="container max-w-3xl px-4 py-16 mx-auto">
+    
     <!-- Page Title -->
-    <h1 class="mb-6 text-4xl font-bold text-center">
-      Support My Work
+     <div class="mb-12 text-center">
+    <h1 class="text-3xl font-bold text-gray-900 dark:text-dark-text md:text-4xl">
+      <span class="relative inline-block">
+            Support My Work
+            <span class="absolute bottom-0 left-0 w-full h-1 -mb-1 bg-primary dark:bg-primary-dark opacity-20"></span>
+          </span>
     </h1>
+    <p class="max-w-2xl mx-auto mt-4 text-gray-600 dark:text-dark-muted">
+      Helping sustain open, community-focused projects and continuous learning
+      </p>
+    </div>
 
     <!-- Intro / Trust Message -->
     <p class="mb-10 text-lg text-center text-gray-600 dark:text-gray-300">
@@ -29,10 +38,10 @@
       </h3>
 
       <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <div class="py-4 font-medium text-center text-gray-700 border border-gray-200 rounded-lg dark:text-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">MWK 5,000</div>
-        <div class="py-4 font-medium text-center text-gray-700 border border-gray-200 rounded-lg dark:text-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">MWK 10,000</div>
-        <div class="py-4 font-medium text-center text-gray-700 border border-gray-200 rounded-lg dark:text-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">MWK 20,000</div>
-        <div class="py-4 font-medium text-center text-gray-700 border border-gray-200 rounded-lg dark:text-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">Custom</div>
+        <div class="py-4 font-medium text-center text-gray-700 border border-gray-200 rounded-lg dark:text-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700">MWK 5,000</div>
+        <div class="py-4 font-medium text-center text-gray-700 border border-gray-200 rounded-lg dark:text-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700">MWK 10,000</div>
+        <div class="py-4 font-medium text-center text-gray-700 border border-gray-200 rounded-lg dark:text-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700">MWK 20,000</div>
+        <div class="py-4 font-medium text-center text-gray-700 border border-gray-200 rounded-lg dark:text-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700">Custom</div>
       </div>
     </section>
 
